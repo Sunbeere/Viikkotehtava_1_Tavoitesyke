@@ -12,6 +12,10 @@ export default function App() {
     ?(220 - ageNumber)* 0.65
     : 0;
 
+   const upperLimit = age !== '' && Number.isFinite(ageNumber)
+   ?(220 - ageNumber)* 0.85
+    : 0;
+    
   return (
     <View style={styles.container}>
       <Text style={styles.header}>HeartRate Limits Calculator</Text>
@@ -26,7 +30,7 @@ export default function App() {
       placeholder="Enter age" />
       <StatusBar style="auto" />
       <Text>Lower limit:{lowerLimit.toFixed(2)} bpm</Text>
-      <Text>Upper limit:</Text>
+      <Text>Upper limit:{upperLimit.toFixed(2)} bpm</Text>
     </View>
   );
 }

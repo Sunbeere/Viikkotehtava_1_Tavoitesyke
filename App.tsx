@@ -18,7 +18,8 @@ export default function App() {
       onChangeText={setAge}
       placeholder="Enter age" />
       <StatusBar style="auto" />
-
+      <Text>Lower limit:</Text>
+      <Text>Upper limit:</Text>
     </View>
   );
 }
@@ -27,12 +28,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  
+    paddingTop: 60,
+    paddingLeft:20,
+   
   },
 
     header: { fontSize: 26, fontWeight: 'bold', textAlign: 'left', marginBottom: 30, 
     },
 
-    input: {borderWith: 1, bordercolor: 'gray', padding: 10, marginTop:10, borderRadius: 5, },
+    input: { borderWidth: 1, borderColor: 'gray', padding: 10, marginTop:10, borderRadius: 5, width:100},
 });
